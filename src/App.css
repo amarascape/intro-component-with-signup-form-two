@@ -1,3 +1,55 @@
+:root {
+  --local-red: hsl(0, 100%, 74%);
+  --local-green: hsl(154, 59%, 51%);
+  --local-blue: hsl(248, 32%, 49%);
+  --local-dark-blue: hsl(249, 10%, 26%);
+  --local-grayish-blue: hsl(246, 25%, 77%);
+}
+
+/* || BOX MODEL FIX */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* || CENTERING MAIN IN BODY */
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  max-width: 85%;
+  padding: 2.5rem;
+  margin: auto;
+}
+
+footer {
+  align-self: flex-end;
+  margin: 0 auto;
+}
+
+/* || GLOBAL STYLES */
+
+body {
+  min-width: 400px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+/* || ATTRIBUTION */
 .attribution {
   font-size: 11px;
   text-align: center;
