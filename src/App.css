@@ -1,6 +1,7 @@
 :root {
   --local-red: hsl(0, 100%, 74%);
   --local-green: hsl(154, 59%, 51%);
+  --light-green: #77e2b4;
   --local-blue: hsl(248, 32%, 49%);
   --local-dark-blue: hsl(249, 10%, 26%);
   --local-grayish-blue: hsl(246, 25%, 77%);
@@ -53,6 +54,9 @@ body {
 
 body {
   background-color: var(--local-red);
+  background-image: url(images/bg-intro-mobile.png);
+  /* background-repeat: no-repeat; */
+  background-attachment: fixed;
 }
 
 /* || TRY IT FREE */
@@ -137,4 +141,11 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* || ACTIVE STATES */
+
+#submitButton:hover {
+  cursor: pointer;
+  background-color: var(--light-green);
 }
