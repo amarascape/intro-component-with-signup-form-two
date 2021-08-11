@@ -9,8 +9,8 @@ function Main() {
     e.preventDefault();
   }
 
-  function onClickPreventDefaul(e) {
-    alert("onClickPreventDefaul called, form will not submit");
+  function onClickPreventDefault(e) {
+    alert("onClickPreventDefault called, form will not submit");
     e.preventDefault();
   }
 
@@ -24,7 +24,8 @@ function Main() {
           invaluable.
         </p>
         <div className="tryItFree">
-          Try it free 7 days then $20/mo. thereafter
+          <span id="tryItFreeText">Try it free 7 days</span> then <br /> $20/mo.
+          thereafter
         </div>
         <form id="signUpForm" onSubmit={(e) => formPreventDefault(e)}>
           <input type="text" placeholder="First Name" />
@@ -32,13 +33,15 @@ function Main() {
           <input type="text" placeholder="Email Address" />
           <input type="text" placeholder="Password" />
           <input
+            id="submitButton"
             type="submit"
             name="submit"
             value="Claim your free trial"
-            onClick={(e) => onClickPreventDefaul(e)}
+            onClick={(e) => onClickPreventDefault(e)}
           />
           <p id="consentWarning">
-            By clicking the button, you are agreeing to our Terms and Services
+            By clicking the button, you are agreeing to our{" "}
+            <span id="termsAndServices">Terms and Services</span>
           </p>
         </form>
       </main>

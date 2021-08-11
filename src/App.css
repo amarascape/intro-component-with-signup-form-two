@@ -47,6 +47,86 @@ body {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+body {
+  background-color: var(--local-red);
+}
+
+/* || TRY IT FREE */
+
+.tryItFree {
+  background-color: var(--local-blue);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.tryItFree {
+  box-shadow: 0px 8px 4px 0px rgb(0 0 0 / 40%);
+}
+
+#tryItFreeText {
+  font-weight: bold;
+}
+
+/* || SIGN UP FORM */
+
+#signUpForm {
+  background-color: white;
+  border-radius: 1rem;
+}
+
+#signUpForm {
+  box-shadow: 0px 8px 4px 0px rgb(0 0 0 / 40%);
+}
+
+#signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#signUpForm > * {
+  width: 90%;
+  margin: 0.5rem;
+}
+
+#signUpForm input:first-of-type {
+  margin-top: 1rem;
+}
+
+#signUpForm input {
+  padding: 1rem;
+  font-weight: bold;
+  border-style: ridge;
+  border-color: var(--local-grayish-blue);
+  border-width: 1px;
+  border-radius: 0.3rem;
+}
+
+#submitButton {
+  background-color: var(--local-green);
+  border: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+#submitButton {
+  box-shadow: inset 0px -5px 0px 0px rgb(0 0 0 / 40%);
+}
+
+#consentWarning {
+  color: var(--local-grayish-blue);
+  margin-top: 0;
+}
+
+#termsAndServices {
+  color: var(--local-red);
+  font-weight: bold;
 }
 
 /* || ATTRIBUTION */
