@@ -96,11 +96,19 @@ body {
 
 #signUpForm > * {
   width: 90%;
-  margin: 0.5rem;
+}
+
+.input-item {
+  min-height: 7.2rem;
+}
+
+.invalid-feedback {
+  text-align: right;
+  font-style: italic;
 }
 
 #signUpForm input:first-of-type {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 #signUpForm input {
@@ -117,6 +125,7 @@ body {
   border: none;
   text-transform: uppercase;
   color: white;
+  margin-bottom: 1rem;
 }
 
 #submitButton {

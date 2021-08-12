@@ -3,52 +3,6 @@ import "./App.css";
 
 // || ELEMENT BUILDERS
 
-function Main() {
-  function formPreventDefault(e) {
-    alert("formPreventDefault called, form will not submit");
-    e.preventDefault();
-  }
-
-  function onClickPreventDefault(e) {
-    alert("onClickPreventDefault called, form will not submit");
-    e.preventDefault();
-  }
-
-  return (
-    <>
-      <main>
-        <h1>Learn to code by watching others</h1>
-        <p id="leadingParagraph">
-          See how experienced developers solve problems in real-time. Watching
-          scripted tutorials is great, but understanding how developers think is
-          invaluable.
-        </p>
-        <div className="tryItFree">
-          <span id="tryItFreeText">Try it free 7 days</span> then <br /> $20/mo.
-          thereafter
-        </div>
-        <form id="signUpForm" onSubmit={(e) => formPreventDefault(e)}>
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
-          <input type="text" placeholder="Email Address" />
-          <input type="text" placeholder="Password" />
-          <input
-            id="submitButton"
-            type="submit"
-            name="submit"
-            value="Claim your free trial"
-            onClick={(e) => onClickPreventDefault(e)}
-          />
-          <p id="consentWarning">
-            By clicking the button, you are agreeing to our{" "}
-            <span id="termsAndServices">Terms and Services</span>
-          </p>
-        </form>
-      </main>
-    </>
-  );
-}
-
 function Footer() {
   return (
     <>
@@ -67,7 +21,6 @@ function Footer() {
 }
 
 function BootstrapFormWithValidation() {
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
   function validateForm() {
     "use strict";
 
@@ -93,117 +46,96 @@ function BootstrapFormWithValidation() {
 
   return (
     <>
-      <form className="row g-3 needs-validation" noValidate>
-        <div className="col-md-4">
-          <label htmlFor="validationCustom01" className="form-label">
-            First name
-          </label>
+      <form className="needs-validation" id="signUpForm" noValidate>
+        {/* || FIRST NAME */}
+        <div className="input-item first-name-input">
           <input
             type="text"
             className="form-control"
             id="validationCustom01"
-            placeholder="Mark"
+            placeholder="First name"
             required
           />
-          <div className="valid-feedback">Looks good!</div>
+          <div className="invalid-feedback">First Name cannot be empty</div>
         </div>
-        <div className="col-md-4">
-          <label htmlFor="validationCustom02" className="form-label">
-            Last name
-          </label>
+        {/* || LAST NAME */}
+        <div className="input-item last-name-input">
           <input
             type="text"
             className="form-control"
             id="validationCustom02"
-            placeholder="Otto"
+            placeholder="Last name"
             required
           />
-          <div className="valid-feedback">Looks good!</div>
+          <div className="invalid-feedback">Last Name cannot be empty</div>
         </div>
-        <div className="col-md-4">
-          <label htmlFor="validationCustomUsername" className="form-label">
-            Username
-          </label>
-          <div className="input-group has-validation">
-            <span className="input-group-text" id="inputGroupPrepend">
-              @
-            </span>
-            <input
-              type="text"
-              className="form-control"
-              id="validationCustomUsername"
-              aria-describedby="inputGroupPrepend"
-              required
-            />
-            <div className="invalid-feedback">Please choose a username.</div>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <label htmlFor="validationCustom03" className="form-label">
-            City
-          </label>
+        {/* || EMAIL ADDRESS */}
+        <div className="input-item email-address-input">
           <input
             type="text"
             className="form-control"
             id="validationCustom03"
+            placeholder="Email Address"
             required
           />
-          <div className="invalid-feedback">Please provide a valid city.</div>
+          <div className="invalid-feedback">
+            Looks like this is not an email
+          </div>
         </div>
-        <div className="col-md-3">
-          <label htmlFor="validationCustom04" className="form-label">
-            State
-          </label>
-          <select
-            className="form-select"
-            id="validationCustom04"
-            defaultValue=""
-            required
-          >
-            <option disabled>Choose...</option>
-            <option>...</option>
-          </select>
-          <div className="invalid-feedback">Please select a valid state.</div>
-        </div>
-        <div className="col-md-3">
-          <label htmlFor="validationCustom05" className="form-label">
-            Zip
-          </label>
+        {/* || PASSWORD */}
+        <div className="input-item password-input">
           <input
             type="text"
             className="form-control"
-            id="validationCustom05"
+            id="validationCustom04"
+            placeholder="Password"
             required
           />
-          <div className="invalid-feedback">Please provide a valid zip.</div>
+          <div className="invalid-feedback">Password cannot be empty</div>
         </div>
-        <div className="col-12">
-          <div className="form-check">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              value=""
-              id="invalidCheck"
-              required
-            />
-            <label className="form-check-label" htmlFor="invalidCheck">
-              Agree to terms and conditions
-            </label>
-            <div className="invalid-feedback">
-              You must agree before submitting.
-            </div>
-          </div>
-        </div>
-        <div className="col-12">
-          <button
-            className="btn btn-primary"
-            type="submit"
-            onClick={validateForm}
-          >
-            Submit form
-          </button>
-        </div>
+        {/* || SUBMIT BUTTON */}
+        <input
+          id="submitButton"
+          type="submit"
+          name="submit"
+          value="Claim your free trial"
+          onClick={validateForm}
+        />
+        <p id="consentWarning">
+          By clicking the button, you are agreeing to our{" "}
+          <span id="termsAndServices">Terms and Services</span>
+        </p>
       </form>
+    </>
+  );
+}
+
+function Main() {
+  function formPreventDefault(e) {
+    alert("formPreventDefault called, form will not submit");
+    e.preventDefault();
+  }
+
+  function onClickPreventDefault(e) {
+    alert("onClickPreventDefault called, form will not submit");
+    e.preventDefault();
+  }
+
+  return (
+    <>
+      <main>
+        <h1>Learn to code by watching others</h1>
+        <p id="leadingParagraph">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+        <div className="tryItFree">
+          <span id="tryItFreeText">Try it free 7 days</span> then <br /> $20/mo.
+          thereafter
+        </div>
+        <BootstrapFormWithValidation />
+      </main>
     </>
   );
 }
@@ -215,7 +147,6 @@ function App() {
     <>
       <Main />
       <Footer />
-      <BootstrapFormWithValidation />
     </>
   );
 }
