@@ -29,9 +29,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop View](./screenshot.jpg)
-![Mobile View](./screenshot.jpg)
-![Active View](./screenshot.jpg)
+#### Desktop View
+![Desktop View](screenshots/desktop-view.png)
+#### Mobile View
+![Mobile View](screenshots/mobile-view.png)
+#### Active View
+![Active View](screenshots/active-view.png)
 
 ### Links
 
