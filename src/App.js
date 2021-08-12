@@ -22,30 +22,24 @@ function Footer() {
 }
 
 function Main() {
-  function formPreventDefault(e) {
-    alert("formPreventDefault called, form will not submit");
-    e.preventDefault();
-  }
-
-  function onClickPreventDefault(e) {
-    alert("onClickPreventDefault called, form will not submit");
-    e.preventDefault();
-  }
-
   return (
     <>
       <main>
-        <h1>Learn to code by watching others</h1>
-        <p id="leadingParagraph">
-          See how experienced developers solve problems in real-time. Watching
-          scripted tutorials is great, but understanding how developers think is
-          invaluable.
-        </p>
-        <div className="tryItFree">
-          <span id="tryItFreeText">Try it free 7 days</span> then <br /> $20/mo.
-          thereafter
+        <div className="grid-left">
+          <h1>Learn to code by watching others</h1>
+          <p id="leadingParagraph">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
         </div>
-        <SignUpForm />
+        <div className="grid-right">
+          <div className="tryItFree">
+            <span id="tryItFreeText">Try it free 7 days</span> then <br />{" "}
+            $20/mo. thereafter
+          </div>
+          <SignUpForm />
+        </div>
       </main>
     </>
   );
